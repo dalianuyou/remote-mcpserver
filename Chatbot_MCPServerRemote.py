@@ -11,7 +11,11 @@ from mcp.server.fastmcp import FastMCP
 PAPER_DIR = "papers"
 
 # initialize FastMCP server
-mcp = FastMCP("resarch", port=8001)
+# Use Render's PORT environment variable, or default to 8001 locally
+port = int(os.environ.get("PORT", 8001))
+
+# Important: host must be "0.0.0.0" for Render to detect the server
+mcp = FastMCP("resarch", host="0.0.0.0", port=port)
 
 """Tool functions to search for papers on arXiv and extract their information."""
 
