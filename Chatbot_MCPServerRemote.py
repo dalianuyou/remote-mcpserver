@@ -11,7 +11,7 @@ from mcp.server.fastmcp import FastMCP
 PAPER_DIR = "papers"
 
 # initialize FastMCP server
-mcp = FastMCP("resarch")
+mcp = FastMCP("resarch", port=8001)
 
 """Tool functions to search for papers on arXiv and extract their information."""
 
@@ -107,4 +107,4 @@ def extract_info(paper_id: str) -> str:
 
 
 if __name__ == "__main__":
-    mcp.run(transport="stdio")
+    mcp.run(transport="sse")
