@@ -1,0 +1,22 @@
+{
+  "2501.02842v1": {
+    "title": "Foundations of GenIR",
+    "authors": [
+      "Qingyao Ai",
+      "Jingtao Zhan",
+      "Yiqun Liu"
+    ],
+    "summary": "The chapter discusses the foundational impact of modern generative AI models on information access (IA) systems. In contrast to traditional AI, the large-scale training and superior data modeling of generative AI models enable them to produce high-quality, human-like responses, which brings brand new opportunities for the development of IA paradigms. In this chapter, we identify and introduce two of them in details, i.e., information generation and information synthesis. Information generation allows AI to create tailored content addressing user needs directly, enhancing user experience with immediate, relevant outputs. Information synthesis leverages the ability of generative AI to integrate and reorganize existing information, providing grounded responses and mitigating issues like model hallucination, which is particularly valuable in scenarios requiring precision and external knowledge. This chapter delves into the foundational aspects of generative models, including architecture, scaling, and training, and discusses their applications in multi-modal scenarios. Additionally, it examines the retrieval-augmented generation paradigm and other methods for corpus modeling and understanding, demonstrating how generative AI can enhance information access systems. It also summarizes potential challenges and fruitful directions for future studies.",
+    "pdf_url": "https://arxiv.org/pdf/2501.02842v1",
+    "published": "2025-01-06"
+  },
+  "2510.01751v1": {
+    "title": "A cybersecurity AI agent selection and decision support framework",
+    "authors": [
+      "Masike Malatji"
+    ],
+    "summary": "This paper presents a novel, structured decision support framework that systematically aligns diverse artificial intelligence (AI) agent architectures, reactive, cognitive, hybrid, and learning, with the comprehensive National Institute of Standards and Technology (NIST) Cybersecurity Framework (CSF) 2.0. By integrating agent theory with industry guidelines, this framework provides a transparent and stepwise methodology for selecting and deploying AI solutions to address contemporary cyber threats. Employing a granular decomposition of NIST CSF 2.0 functions into specific tasks, the study links essential AI agent properties such as autonomy, adaptive learning, and real-time responsiveness to each subcategory's security requirements. In addition, it outlines graduated levels of autonomy (assisted, augmented, and fully autonomous) to accommodate organisations at varying stages of cybersecurity maturity. This holistic approach transcends isolated AI applications, providing a unified detection, incident response, and governance strategy. Through conceptual validation, the framework demonstrates how tailored AI agent deployments can align with real-world constraints and risk profiles, enhancing situational awareness, accelerating response times, and fortifying long-term resilience via adaptive risk management. Ultimately, this research bridges the gap between theoretical AI constructs and operational cybersecurity demands, establishing a foundation for robust, empirically validated multi-agent systems that adhere to industry standards.",
+    "pdf_url": "https://arxiv.org/pdf/2510.01751v1",
+    "published": "2025-10-02"
+  }
+}

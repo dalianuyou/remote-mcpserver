@@ -1,0 +1,113 @@
+MODEL CONTEXT PROTOCOL (MCP) ARCHITECTURE DIAGRAM
+=====================================================
+
+                            MCP HOST (AI Application)
+                         ┌─────────────────────────────┐
+                         │  Claude Desktop / VS Code   │
+                         │                             │
+                         │  ┌─────────────────────────┐│
+                         │  │   LLM Integration       ││
+                         │  └─────────────────────────┘│
+                         └─────────────┬───────────────┘
+                                       │
+                    ┌──────────────────┼──────────────────┐
+                    │                  │                  │
+            ┌───────▼────────┐ ┌───────▼────────┐ ┌───────▼────────┐
+            │   MCP CLIENT   │ │   MCP CLIENT   │ │   MCP CLIENT   │
+            │      #1        │ │      #2        │ │      #3        │
+            └───────┬────────┘ └───────┬────────┘ └───────┬────────┘
+                    │                  │                  │
+            ═══════════════════════════════════════════════════════════
+                  1:1 CONNECTION RELATIONSHIP
+            ═══════════════════════════════════════════════════════════
+                    │                  │                  │
+            ┌───────▼────────┐ ┌───────▼────────┐ ┌───────▼────────┐
+            │   MCP SERVER   │ │   MCP SERVER   │ │   MCP SERVER   │
+            │  (Filesystem)  │ │   (Database)   │ │    (Sentry)    │
+            │     LOCAL      │ │     LOCAL      │ │    REMOTE      │
+            └────────────────┘ └────────────────┘ └────────────────┘
+
+                    ┌─────────────────────────────────────────────┐
+                    │              MCP LAYERS                     │
+                    │                                             │
+                    │  DATA LAYER (Inner - JSON-RPC 2.0)         │
+                    │  ┌─────────────────────────────────────────┐│
+                    │  │ • Lifecycle Management                  ││
+                    │  │ • Primitives (Tools, Resources, Prompts)││
+                    │  │ • Notifications                         ││
+                    │  │ • Client/Server Features                ││
+                    │  └─────────────────────────────────────────┘│
+                    │                                             │
+                    │  TRANSPORT LAYER (Outer)                   │
+                    │  ┌─────────────────────────────────────────┐│
+                    │  │ • STDIO Transport (Local)               ││
+                    │  │ • HTTP Transport (Remote + SSE)         ││
+                    │  │ • Authentication & Message Framing      ││
+                    │  └─────────────────────────────────────────┘│
+                    └─────────────────────────────────────────────┘
+
+MCP PRIMITIVES OVERVIEW
+=======================
+
+SERVER PRIMITIVES:                    CLIENT PRIMITIVES:
+┌─────────────────┐                   ┌─────────────────┐
+│     TOOLS       │ ◄────────────────►│    SAMPLING     │
+│ • Executable    │                   │ • LLM requests  │
+│   functions     │                   │                 │
+│ • API calls     │                   │   ELICITATION   │
+│ • File ops      │                   │ • User input    │
+├─────────────────┤                   │   requests      │
+│   RESOURCES     │                   │                 │
+│ • Context data  │                   │    LOGGING      │
+│ • File contents │                   │ • Debug msgs    │
+│ • DB records    │                   │ • Monitoring    │
+├─────────────────┤                   └─────────────────┘
+│    PROMPTS      │
+│ • Templates     │
+│ • Few-shot      │
+│   examples      │
+└─────────────────┘
+
+COMMUNICATION FLOW
+==================
+
+1. INITIALIZATION
+   Client ──initialize──► Server
+   Client ◄──response──── Server
+   Client ──initialized─► Server (notification)
+
+2. DISCOVERY
+   Client ──tools/list──► Server
+   Client ◄──tools────── Server
+
+3. EXECUTION
+   Client ──tools/call──► Server (with arguments)
+   Client ◄──result────── Server (with content array)
+
+4. NOTIFICATIONS (Real-time updates)
+   Client ◄──notifications/tools/list_changed── Server
+   Client ──tools/list──► Server (refresh)
+
+TRANSPORT MECHANISMS
+====================
+
+LOCAL SERVERS:                REMOTE SERVERS:
+┌─────────────────┐           ┌─────────────────┐
+│ STDIO Transport │           │ HTTP Transport  │
+│                 │           │                 │
+│ • Standard I/O  │           │ • HTTP POST     │
+│ • Same machine  │           │ • Server-Sent   │
+│ • No network    │           │   Events (SSE)  │
+│   overhead      │           │ • OAuth tokens  │
+│ • Optimal perf  │           │ • API keys      │
+└─────────────────┘           └─────────────────┘
+
+KEY BENEFITS
+============
+✓ Standardized context exchange protocol
+✓ Dynamic tool discovery and execution
+✓ Real-time updates via notifications
+✓ Flexible content types and responses
+✓ Model-agnostic design
+✓ Local and remote server support
+✓ Type-safe with JSON Schema validation

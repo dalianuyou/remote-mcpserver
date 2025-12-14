@@ -1,0 +1,45 @@
+# Research Findings: Agentic AI from DeepLearning.AI
+
+## Interesting Term Discovered: "Agentic AI"
+
+### Source
+From the DeepLearning.AI website (https://deeplearning.ai), I discovered the term "Agentic AI" as a particularly prominent and current topic. The website features:
+- A new course titled "Building Coding Agents with Tool Execution"
+- Multiple references to agentic systems in recent AI news
+- Andrew Ng's focus on teaching people to "build agentic AI"
+
+## Paper Research Results
+
+I searched for academic papers related to "agentic AI" and found two relevant recent publications:
+
+### Paper 1: "Trustworthy AI in the Agentic Lakehouse: from Concurrency to Governance"
+- **Authors**: Jacopo Tagliabue, Federico Bianchi, Ciro Greco
+- **Published**: November 20, 2025
+- **Key Focus**: Enterprise trustworthiness of AI agents
+
+**Summary**: This paper addresses a critical challenge in deploying AI agents in enterprise environments - trustworthiness when working with production data. The authors argue that traditional data lakehouse architectures are inadequate for agent access patterns and propose a new infrastructure approach called "Bauplan." Their solution draws inspiration from Multi-Version Concurrency Control (MVCC) in databases but adapts it for the decoupled, multi-language environment of modern AI agents. The paper includes a reference implementation of a self-healing pipeline that combines agent reasoning with correctness and trust guarantees.
+
+### Paper 2: "Foundations of GenIR"
+- **Authors**: Qingyao Ai, Jingtao Zhan, Yiqun Liu
+- **Published**: January 6, 2025
+- **Key Focus**: Generative AI in information access systems
+
+**Summary**: This foundational paper explores how generative AI models are transforming information access (IA) systems. The authors identify two key paradigms: information generation (creating tailored content directly addressing user needs) and information synthesis (integrating and reorganizing existing information for grounded responses). The paper covers the architectural foundations of generative models, their scaling properties, training methodologies, and applications in multi-modal scenarios. It particularly emphasizes retrieval-augmented generation (RAG) as a method to enhance information access while mitigating hallucination issues.
+
+## Key Insights and Connections
+
+1. **Enterprise Readiness**: The first paper highlights that while AI capabilities are advancing rapidly, enterprises still have significant concerns about agent trustworthiness in production environments.
+
+2. **Infrastructure Challenges**: Both papers, in different ways, address the infrastructure challenges of modern AI systems - one focusing on data lakehouse architecture for agents, the other on information retrieval and synthesis systems.
+
+3. **Trust and Reliability**: A common theme is the need for reliable, trustworthy AI systems that can handle real-world applications with appropriate safeguards.
+
+4. **Current Trends**: The timing of these papers (late 2024/early 2025) aligns perfectly with the current focus on agentic AI seen on DeepLearning.AI, indicating this is indeed a hot topic in the field.
+
+## Conclusion
+
+"Agentic AI" represents a significant shift from traditional AI models toward systems that can act autonomously and make decisions. The research shows that while the technology is advancing rapidly, key challenges remain around trust, infrastructure, and enterprise deployment. DeepLearning.AI's focus on this area through courses and content reflects the industry's recognition of agentic AI as a transformative technology that requires both technical advancement and practical implementation strategies.
+
+---
+Generated on: $(date)
+Research conducted through arXiv paper database and DeepLearning.AI website analysis.

@@ -1,0 +1,23 @@
+{
+  "2409.17129v1": {
+    "title": "Bayesian Bivariate Conway-Maxwell-Poisson Regression Model for Correlated Count Data in Sports",
+    "authors": [
+      "Mauro Florez",
+      "Michele Guindani",
+      "Marina Vannucci"
+    ],
+    "summary": "Count data play a crucial role in sports analytics, providing valuable insights into various aspects of the game. Models that accurately capture the characteristics of count data are essential for making reliable inferences. In this paper, we propose the use of the Conway-Maxwell-Poisson (CMP) model for analyzing count data in sports. The CMP model offers flexibility in modeling data with different levels of dispersion. Here we consider a bivariate CMP model that models the potential correlation between home and away scores by incorporating a random effect specification. We illustrate the advantages of the CMP model through simulations. We then analyze data from baseball and soccer games before, during, and after the COVID-19 pandemic. The performance of our proposed CMP model matches or outperforms standard Poisson and Negative Binomial models, providing a good fit and an accurate estimation of the observed effects in count data with any level of dispersion. The results highlight the robustness and flexibility of the CMP model in analyzing count data in sports, making it a suitable default choice for modeling a diverse range of count data types in sports, where the data dispersion may vary.",
+    "pdf_url": "https://arxiv.org/pdf/2409.17129v1",
+    "published": "2024-09-25"
+  },
+  "2304.04437v1": {
+    "title": "Monocular 3D Human Pose Estimation for Sports Broadcasts using Partial Sports Field Registration",
+    "authors": [
+      "Tobias Baumgartner",
+      "Stefanie Klatt"
+    ],
+    "summary": "The filming of sporting events projects and flattens the movement of athletes in the world onto a 2D broadcast image. The pixel locations of joints in these images can be detected with high validity. Recovering the actual 3D movement of the limbs (kinematics) of the athletes requires lifting these 2D pixel locations back into a third dimension, implying a certain scene geometry. The well-known line markings of sports fields allow for the calibration of the camera and for determining the actual geometry of the scene. Close-up shots of athletes are required to extract detailed kinematics, which in turn obfuscates the pertinent field markers for camera calibration. We suggest partial sports field registration, which determines a set of scene-consistent camera calibrations up to a single degree of freedom. Through joint optimization of 3D pose estimation and camera calibration, we demonstrate the successful extraction of 3D running kinematics on a 400m track. In this work, we combine advances in 2D human pose estimation and camera calibration via partial sports field registration to demonstrate an avenue for collecting valid large-scale kinematic datasets. We generate a synthetic dataset of more than 10k images in Unreal Engine 5 with different viewpoints, running styles, and body types, to show the limitations of existing monocular 3D HPE methods. Synthetic data and code are available at https://github.com/tobibaum/PartialSportsFieldReg_3DHPE.",
+    "pdf_url": "https://arxiv.org/pdf/2304.04437v1",
+    "published": "2023-04-10"
+  }
+}
